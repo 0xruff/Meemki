@@ -1,4 +1,5 @@
 ﻿using System;
+using Meemki.Interface;
 
 namespace Meemki.Global
 {
@@ -7,6 +8,7 @@ namespace Meemki.Global
         //General
         public static int HorizontalLimitRight { get; } = Console.LargestWindowWidth;
         public static int MeemkiWidth { get; } = 5;
+        public static IControllable PlayerControlledEntity { get; set; }
 
         //Animations
         public static bool AnimationLock { get; set; } = false;

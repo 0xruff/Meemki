@@ -41,6 +41,9 @@ namespace Meemki
             //MEEMKI SETUP
             Model.Meemki meemki = new Model.Meemki();
 
+            //PLAYER CONTROLLED ENTITY SETUP
+            Global.Variables.PlayerControlledEntity = meemki;
+
             //LVL SETUP
             for (int i = 0; i < Console.BufferWidth; i++)
             {
@@ -54,7 +57,7 @@ namespace Meemki
             {
                 if (Global.Variables.AnimationLock)
                 {
-                    meemki.Animate(Global.Variables.LockedAnimation);
+                    Global.Variables.PlayerControlledEntity.Animate(Global.Variables.LockedAnimation);
                 }
                 else
                 {
@@ -62,22 +65,22 @@ namespace Meemki
                     {
                         if (FasterKeyboard.IsKeyDown(KeyCode.Up))
                         {
-                            meemki.Animate(Model.AnimationEnum.JumpLeft);
+                            Global.Variables.PlayerControlledEntity.Animate(Model.AnimationEnum.JumpLeft);
                         }
                         else
                         {
-                            meemki.Animate(Model.AnimationEnum.RunLeft);
+                            Global.Variables.PlayerControlledEntity.Animate(Model.AnimationEnum.RunLeft);
                         }
                     }
                     else if (FasterKeyboard.IsKeyDown(KeyCode.Right))
                     {
                         if (FasterKeyboard.IsKeyDown(KeyCode.Up))
                         {
-                            meemki.Animate(Model.AnimationEnum.JumpRight);
+                            Global.Variables.PlayerControlledEntity.Animate(Model.AnimationEnum.JumpRight);
                         }
                         else
                         {
-                            meemki.Animate(Model.AnimationEnum.RunRight);
+                            Global.Variables.PlayerControlledEntity.Animate(Model.AnimationEnum.RunRight);
                         }
                     }
                     else if (FasterKeyboard.IsKeyDown(KeyCode.Up))
@@ -90,7 +93,7 @@ namespace Meemki
                     }
                     else
                     {
-                        meemki.Animate(Model.AnimationEnum.Idle);
+                        Global.Variables.PlayerControlledEntity.Animate(Model.AnimationEnum.Idle);
                     }
                 }
             }

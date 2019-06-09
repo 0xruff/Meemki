@@ -52,6 +52,7 @@
     <Compile Include="Assets\MeemkiAnimation\WaveStringAnimation.cs" />
     <Compile Include="Global\MemorizableConsole.cs" />
     <Compile Include="Global\Variables.cs" />
+    <Compile Include="Interface\IControllable.cs" />
     <Compile Include="Keyboard\FasterKeyboard.cs" />
     <Compile Include="Logic\AnimationLoader.cs" />
     <Compile Include="Logic\IntroPlayer.cs" />

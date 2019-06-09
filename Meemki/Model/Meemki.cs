@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Meemki.Global;
+using Meemki.Interface;
 
 namespace Meemki.Model
 {
-    public class Meemki
+    public class Meemki : IControllable
     {
         public ConsoleColor MeemkiColor { get; set; } = ConsoleColor.Cyan;
         private MeemkiPosition meemkiPosition;
