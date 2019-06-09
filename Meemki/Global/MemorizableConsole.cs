@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Meemki.Model;
 using System.Windows;
+using Meemki.Logic;
 
 namespace Meemki.Global
 {
@@ -13,6 +14,8 @@ namespace Meemki.Global
 
         public static void Write(char c, int x, int y, ConsoleColor color = ConsoleColor.White)
         {
+            CodePageEnsurer.EnsureLegitCP850(c);
+
             IEnumerable<PositionedChar> toReplace = memory.Where(ch => ch.Position.X == x && ch.Position.Y == y);
             if (toReplace != null && toReplace.Count() == 1)
             {
@@ -32,6 +35,8 @@ namespace Meemki.Global
 
         public static void Write(string s, int startLeft, int startTop, ConsoleColor color = ConsoleColor.White)
         {
+            CodePageEnsurer.EnsureLegitCP850(s);
+
             foreach (char c in s)
             {
                 IEnumerable<PositionedChar> toReplace = memory.Where(ch => ch.Position.X == startLeft && ch.Position.Y == startTop);
@@ -56,6 +61,8 @@ namespace Meemki.Global
 
         private static void WriteOnlyToMemory(char c, int x, int y)
         {
+            CodePageEnsurer.EnsureLegitCP850(c);
+
             IEnumerable<PositionedChar> toReplace = memory.Where(ch => ch.Position.X == x && ch.Position.Y == y);
             if (toReplace != null && toReplace.Count() == 1)
             {
@@ -68,6 +75,8 @@ namespace Meemki.Global
 
         private static void WriteOnlyToMemoryWithoutReplacing_UNSAFE(char c, int x, int y)
         {
+            CodePageEnsurer.EnsureLegitCP850(c);
+
             //Write to memory
             memory.Add(new PositionedChar(new Point(x, y), c));
         }

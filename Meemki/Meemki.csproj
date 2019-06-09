@@ -55,6 +55,7 @@
     <Compile Include="Interface\IControllable.cs" />
     <Compile Include="Keyboard\FasterKeyboard.cs" />
     <Compile Include="Logic\AnimationLoader.cs" />
+    <Compile Include="Logic\CodePageEnsurer.cs" />
     <Compile Include="Logic\IntroPlayer.cs" />
     <Compile Include="Model\AnimationEnum.cs" />
     <Compile Include="Model\Meemki.cs" />
