@@ -24,7 +24,7 @@ More specific but non-technical:
 
 
 
-![meemki_gameplay](.\img\meemki_gameplay.gif)
+![meemki_gameplay](https://raw.githubusercontent.com/0xruff/Meemki/master/img/meemki_gameplay.gif)
 
 
 
@@ -71,10 +71,10 @@ The visual style of *Meemki* is best described as ***EASCII technoid neon noir**
 
 ------
 
-![Meemki_City](.\img\meemki_city.png)
+![Meemki_City](https://raw.githubusercontent.com/0xruff/Meemki/master/img/meemki_city.png)
 
 
 
 ## Contact
 
-![1565437250446](.\img\1565437250446.png)
+![1565437250446](https://raw.githubusercontent.com/0xruff/Meemki/master/img/1565437250446.png)
