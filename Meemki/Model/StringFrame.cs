@@ -10,7 +10,7 @@ namespace Meemki.Model
         public int YOffsetToPrevious { get; private set; }
         public int ShowInMilliseconds { get; private set; }
 
-        public StringFrame(int frame, string pose, int xOffsetToPrevious, int yOffsetToPrevious = 0, int showInMilliseconds = 50) //TODO: put in global variables?
+        public StringFrame(int frame, string pose, int xOffsetToPrevious, int yOffsetToPrevious = 0, int showInMilliseconds = 60) //TODO: put in global variables?
         {
             Frame = frame;
             if (String.IsNullOrWhiteSpace(pose))
